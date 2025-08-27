@@ -109,7 +109,7 @@ h1{
 .nutrition p{
     margin: var(--space-2) 0 var(--space-3) 0;
 }
-/* containaers*/
+/* containers*/
 .container{
     max-width:46rem ;
     width: 100%;
