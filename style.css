@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* typography */
+    --font-heading:"Young Serif",serif;
+    --font-body:"Outfit", sans-serif;
+
+    --lh-100: 1; /* line height */
+    --lh-150: 1.5; /* line height */
+
+    /* Colors */
+    --color-1:#7A284E;/* rose-800 */  
+    --color-2:#fff7fb;/* rose-50 */  
+    --color-3:#312E2C;/* stone-900 */  
+    --color-4:#5F564D;/* stone-600 */  
+    --color-5:#E3DDD7;/* stone-150 */  
+    --color-6:#F3E5D7;/* stone-100 */  
+    --color-7:#854632;/* brown-800 */  
+    --color-8:#FFFFFF;/* white */  
+
+    /* Font Sizes */
+    --fs-preset-1: 2.5rem;  /* 40px */
+    --fs-preset-2:1.75rem; /* 28px */
+
+    --fs-xs: 0.75rem; /* 12px */
+    --fs-sm:0.875rem; /* 14px */
+    --fs-base:1rem;   /* 16px */
+    --fs-lg:1.25rem;  /* 20px */
+    --fs-x1:1.5rem;   /* 24px */
+    --fs-2x1:2rem;    /* 32px */
+    --fs-3x1:3rem;    /* 48px */
+    --fs-4x1:4rem;    /* 64px */
+    --fs-5x1:5rem;    /* 80px */
+
+    /* Spacing Scale */
+    --space-0:0.375rem; /* 6px */
+    --space-1:0.5rem;  /* 8px */
+    --space-2:0.75rem; /* 12px */
+    --space-3:1rem;    /* 16px */
+    --space-4:1.5rem;  /* 24px */
+    --space-5:2rem;    /* 32px */
+    --space-6:3rem;    /* 48px */
+    --space-7:4rem;    /* 64px */
+    --space-8:6rem;    /* 96px */
+
+    /* Border Radius */
+    --radius-sm:0.25rem; /* 4px */
+    --radius-md:0.5rem;  /* 8px */
+    --radius-lg:1rem;    /* 16px */
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+body{
+    background-color: var(--color-6);
+    padding: var(--space-8) var(--space-6);
+    font-family: var(--font-body);
+    line-height: var(--lh-150);
+}
+
+section + section{
+    margin-top: var(--space-6);
+}
+
+/* h1 ,h2, h3 */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+h2{
+    color: var(--color-7);
+}
+
+section h2{
+    font-weight: 500;
+    font-size: var(--fs-preset-2);
+}
+
+h1{
+    color: var(--color-3);
+    font-size:clamp(2rem, 3.5vw, var(--fs-preset-1));
+    font-weight: 500;
+    line-height: var(--lh-100);
+    margin: var(--space-4) 0 var(--space-2);
+}
+
+.time h3{
+    margin-bottom: var(--space-1);
+    color: var(--color-1);
+    font-size: var(--fs-lg);
+    font-weight: 600;
+    font-family: var(--font-body);
+}
+
+ /* paragrafos */
+.desc p{
+    color: var(--color-4);
+    margin-bottom: var(--space-4);
+    font-size: var(--fs-base);
+}
+
+.nutrition p{
+    margin: var(--space-2) 0 var(--space-3) 0;
+}
+/* containaers*/
+.container{
+    max-width:46rem ;
+    width: 100%;
+    background-color: var(--color-8);
+    padding: var(--space-6);
+    border-radius: var(--radius-lg);
+    margin-inline: auto; /* anotar */
+}
+
+.time{
+    background: var(--color-2);
+    border-radius: var(--radius-md);
+    padding: var(--space-4);
+}
+
+.ingredients, .instructions{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+}
+
+.instructions{
+    padding-bottom: var(--space-5);
+    line-height: var(--lh-150);
+}
+
+/* imagens */
+.omelette-img img{
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
+/* listas e paragrafos em comum */
+.time ul, 
+.ingredients ul, 
+.instructions ol, 
+.nutrition p, 
+.nutrition table{
+    color: var(--color-4);
+}
+
+ul li::marker, ol li::marker{
+    color: var(--color-7);
+    font-weight: 600;
+}
+.instructions ol li{
+    margin:0 0 var(--space-1) var(--space-3);
+    padding-left: var(--space-4);
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0 0 0 var(--space-3);
+    list-style-position: outside;
+}
+
+li{
+    padding-left: var(--space-3);
+}
+
+li + li{
+    margin-top: var(--space-1);
+}
+
+.ingredients ul{
+    margin-bottom: var(--space-5);
+}
+
+/* tabela */
+
+.nutrition table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--color-4);
+    font-size: var(--fs-base);
+}
+
+table th{
+    font-weight: 500;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: var(--space-3);
+    padding: var(--space-1) 0 var(--space-3) var(--space-1);
+  
+}
+
+table td{
+    color: var(--color-7);
+    font-weight: 700;
+}
+
+table tr{
+    border-bottom: 2px solid #8545321f;
+}
+
+table tr:last-child{
+    border-bottom: none;
+}
+
+
+/* @media */
+@media (max-width: 480px) {
+    body {padding: var(--space-4);}
+    .container{padding: var(--space-4);}
+    h1 {font-size: clamp(1.75rem, 7vw, var(--fs-preset-1));}
+    .time {padding: var(--space-3);}
+}
