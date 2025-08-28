@@ -70,7 +70,7 @@ section + section{
 }
 
 /* h1 ,h2, h3 */
-h1, h2, h3 {
+h1, h2 {
     font-family: var(--font-heading);
 }
 
@@ -91,7 +91,7 @@ h1{
     margin: var(--space-4) 0 var(--space-2);
 }
 
-.time h3{
+.time h2{
     margin-bottom: var(--space-1);
     color: var(--color-1);
     font-size: var(--fs-lg);
